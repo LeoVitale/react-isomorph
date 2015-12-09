@@ -46,7 +46,7 @@ var io = require('socket.io').listen(server);
 var params = {screen_name: 'nodejs'};
 twit.stream('statuses/filter',{ track: 'react'}, function(stream){
     stream.on('data', function(tweet) {
-       console.log(tweet.text);
+       //console.log(tweet.text);
      });
 
      stream.on('error', function(error) {
