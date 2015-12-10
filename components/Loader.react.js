@@ -1,13 +1,14 @@
 var React = require('react');
 
 module.exports = Loader = React.createClass({
-  // Render the component
-  render: function(){
 
-    return (
-      <div className="loader">
-          loader
-      </div>
-    )
-  }
+    // Render the component
+    render: function() {
+
+        return (
+            <div className={"loader " + (this.props.paging ? ' active' : '')}>
+                <img src="svg/loader.svg"/>
+            </div>
+        )
+    }
 });

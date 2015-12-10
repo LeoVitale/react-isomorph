@@ -16,7 +16,7 @@ schema.statics.getTweets = function(page, skip, callback) {
     var tweets = [],
     start = (page * 10) + (skip * 1);
     // Query the db, using skip and limit to achieve page chunks
-    Tweet.find({}, 'twid active outhor avatar body date screenname', {
+    Tweet.find({}, 'twid active author avatar body date screenname', {
             skip: start,
             limit: 10
         })
